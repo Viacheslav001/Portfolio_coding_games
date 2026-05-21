@@ -1,0 +1,141 @@
+/* error.css — Стилі для сторінки Oops! */
+
+/* 1. Загальні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+}
+
+/* 2. Контейнер на всю висоту (Фішка для притискання футера) */
+.container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh; /* Займає 100% висоти екрана */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Хедер (верхня частина) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.menu {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* 4. Центральний блок (Oops!) */
+.hero {
+    flex-grow: 1; /* Забирає весь вільний простір, штовхаючи футер вниз */
+    display: flex;
+    align-items: center; /* Центрує контент по вертикалі */
+    justify-content: center;
+}
+
+.hero-profile {
+    display: flex;
+    align-items: center;
+    gap: 8%; /* Відступ між фото та текстом */
+    width: 100%;
+}
+
+.main-photo {
+    width: 32%; /* Розмір фото як на макеті */
+    height: auto;
+    display: block;
+}
+
+.hero-title h1 {
+    font-size: 8vw; /* Гумовий розмір тексту */
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.hero-title p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* Кнопка-овал */
+.hero-title a {
+    display: inline-block;
+    padding: 14px 35px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.hero-title a:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* 5. Футер (завжди в самому низу) */
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.85rem;
+}
+
+.bottom-footer span {
+    color: #444;
+}
+
+.scroll-top {
+    color: #444;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    color: #fff;
+}
+
+/* 6. Адаптивність для мобілок */
+@media (max-width: 768px) {
+    .hero-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .main-photo {
+        width: 70%;
+    }
+
+    .hero-title h1 {
+        font-size: 18vw;
+    }
+
+    .main-header, .bottom-footer {
+        padding: 20px 0;
+    }
+}
