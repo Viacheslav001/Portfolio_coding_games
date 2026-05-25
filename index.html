@@ -87,15 +87,30 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2>Давайте співпрацювати!</h2>
+    <h2>Давайте співпрацювати!</h2>
+    <div class="contact-layout">
         <div class="contact-links">
             <a href="https://mail.google.com/" class="email">sv862622@gmail.com</a>
             <div class="social-contacts">
-                <p>Telegram: <a href="https://t.me/@Numizmat_01" class="telegram" target="_blank">@Numizmat_01</a></p>
+                <p>Telegram: <a href="https://t.me/Numizmat_01" class="telegram" target="_blank">@Numizmat_01</a></p>
                 <p>Discord: <span>shevchenko_viacheslav</span></p>
             </div>
         </div>
-    </section>
+
+        <div class="contact-form-block">
+            <form class="direct-form" id="emailForm">
+                <input type="text" name="user_name" placeholder="Ваше ім'я" required>
+                <input type="email" name="user_email" placeholder="Ваш Email" required>
+                <textarea name="message" placeholder="Опис вашої ідеї чи повідомлення" rows="5" required></textarea>
+                <button type="submit" class="btn-submit" id="submitBtn">Надіслати</button>
+                <p class="form-status" id="statusMessage" style="margin-top: 15px; font-weight: 700;"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="form.js"></script>
 
     <footer class="bottom-footer">
         <span>© 2026</span>
